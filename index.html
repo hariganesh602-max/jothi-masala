@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jothi Masala | Premium Website</title>
+  <meta name="description" content="Jothi Masala premium brand website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Loader -->
+  <div id="loader">
+    <div class="loader-center">
+      <div class="loader-ring"></div>
+      <h2>JOTHI MASALA</h2>
+      <p>Authentic Tradition • Premium Taste</p>
+    </div>
+  </div>
+
+  <!-- Spice Dust Canvas -->
+  <canvas id="spiceCanvas"></canvas>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-wrap">
+      <a href="#home" class="brand">
+        <img src="images/logo.png" alt="Jothi Masala Logo" class="brand-logo" />
+        <div class="brand-text">
+          <span class="brand-name">JOTHI MASALA</span>
+          <span class="brand-mini">Home Made Goodness</span>
+        </div>
+      </a>
+
+      <nav class="nav" id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-bg-glow hero-bg-glow-1"></div>
+    <div class="hero-bg-glow hero-bg-glow-2"></div>
+
+    <div class="container hero-grid">
+      <div class="hero-left reveal">
+        <span class="hero-badge">Premium Homemade Masala Brand</span>
+        <h1 class="hero-title">
+          JOTHI<br />
+          MASALA
+        </h1>
+        <p class="hero-subline">Home Made | FSSAI Certified | All Over Tamil Nadu</p>
+        <p class="hero-tagline">JOTHI MASALA IRUKKU... HOTEL ETHUKU...?</p>
+
+        <div class="hero-actions">
+          <a href="#products" class="btn btn-primary">Explore Products</a>
+          <a href="#contact" class="btn btn-secondary">Contact Now</a>
+        </div>
+      </div>
+
+      <div class="hero-right reveal">
+        <div class="hero-showcase">
+          <div class="floating-card floating-card-1 tilt-card">
+            <img src="images/turmeric.png" alt="Turmeric Packet" />
+          </div>
+          <div class="floating-card floating-card-2 tilt-card">
+            <img src="images/red-chilli.png" alt="Red Chilli Packet" />
+          </div>
+          <div class="floating-card floating-card-3 tilt-card">
+            <img src="images/sambar.png" alt="Sambar Packet" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand strip -->
+  <section class="brand-strip reveal">
+    <div class="container brand-strip-grid">
+      <div class="strip-card">Founder: Nagajothi V</div>
+      <div class="strip-card">Homemade Quality</div>
+      <div class="strip-card">Trusted Ingredients</div>
+      <div class="strip-card">Across Tamil Nadu</div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="products-section" id="products">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-kicker">Our Collection</span>
+        <h2>Premium Product Range</h2>
+        <p>Traditional masala, natural skin care, and hair care products crafted with quality and care.</p>
+      </div>
+
+      <div class="product-grid">
+
+        <!-- COOKING -->
+        <article class="product-card reveal tilt-card"
+          data-name="Turmeric Powder"
+          data-tamil="மஞ்சள் தூள்"
+          data-category="Cooking"
+          data-size="20g • 50g • 100g • More sizes available"
+          data-image="images/turmeric.png"
+          data-desc="Pure turmeric powder for daily cooking with rich color and authentic home-style taste.">
+          <div class="shine"></div>
+          <div class="product-image-wrap"><img src="images/turmeric.png" alt="Turmeric Powder" class="product-image" /></div>
+          <div class="product-content">
+            <span class="category cook">Cooking</span>
+            <h3>Turmeric Powder</h3>
+            <p class="tamil-name">மஞ்சள் தூள்</p>
+            <p class="product-size">20g • 50g • 100g • More sizes available</p>
+          </div>
+        </article>
+
+        <article class="product-card reveal tilt-card"
+          data-name="Red Chilli Powder"
+          data-tamil="வர மிளகாய் பொடி"
+          data-category="Cooking"
+          data-size="20g • 50g • 100g • More sizes available"
+          data-image="images/red-chilli.png"
+          data-desc="Spicy and flavorful chilli powder for vibrant color and strong taste in every dish.">
+          <div class="shine"></div>
+          <div class="product-image-wrap"><img src="images/red-chilli.png" alt="Red Chilli Powder" class="product-image" /></div>
+          <div class="product-content">
+            <span class="category cook">Cooking</span>
+            <h3>Red Chilli Powder</h3>
+            <p class="tamil-name">வர மிளகாய் பொடி</p>
+            <p class="product-size">20g • 50g • 100g • More sizes available</p>
+          </div>
+        </article>
+
+        <article class="product-card reveal tilt-card"
+          data-name="Anise Powder"
+          data-tamil="சோம்பு தூள்"
+          data-category="Cooking"
+          data-size="20g • 50g • 100g • More sizes available"
+          data-image="images/anise.png"
+          data-desc="Fragrant anise powder that gives dishes a warm aroma and gentle spice note.">
+          <div class="shine"></div>
+          <div class="product-image-wrap"><img src="images/anise.png" alt="Anise Powder" class="product-image" /></div>
+          <div class="product-content">
+            <span class="category cook">Cooking</span>
+            <h3>Anise Powder</h3>
+            <p class="tamil-name">சோம்பு தூள்</p>
+            <p class="product-size">20g • 50g • 100g • More sizes available</p>
+          </div>
+        </article>
+
+        <article class="product-card reveal tilt-card"
+          data-name="Cumin Powder"
+          data-tamil="சீரக தூள்"
+          data-category="Cooking"
+          data-size="20g • 50g • 100g • More sizes available"
+          data-image="images/cumin.png"
+          data-desc="Aromatic cumin powder for deep flavor and traditional South Indian cooking.">
+          <div class="shine"></div>
+          <div class="product-image-wrap"><img src="images/cumin.png" alt="Cumin Powder" class="product-image" /></div>
+          <div class="product-content">
+            <span class="category cook">Cooking</span>
+            <h3>Cumin Powder</h3>
+            <p class="tamil-name">சீரக தூள்</p>
+            <p class="product-size">20g • 50g • 100g • More sizes available</p>
+          </div>
+        </article>
+
+        <article class="product-card reveal tilt-card"
+          data-name="Pepper Powder"
+          data-tamil="மிளகு தூள்"
+          data-category="Cooking"
+          data-size="20g • 50g • 100g • More sizes available"
+          data-image="images/pepper.png"
+          data-desc="Strong pepper powder with bold aroma and a sharp traditional flavor profile.">
+          <div class="shine"></div>
+          <div class="product-image-wrap"><img src="images/pepper.png" alt="Pepper Powder" class="product-image" /></div>
+          <div class="product-content">
+            <span class="category cook">Cooking</span>
+            <h3>Pepper Powder</h3>
+            <p class="tamil-name">மிளகு தூள்</p>
+            <p class="product-size">20g • 50g • 100g • More sizes available</p>
+          </div>
+        </article>
+
+        <article class="product-card reveal tilt-card"
+          data-name="Kulambu Powder"
+          data-tamil="குழம்பு பொடி"
+          data-category="Cooking"
+          data-size="20g • 50g • 100g • More sizes available"
+          data-image="images/kulambu.png"
+          data-desc="Authentic kulambu powder for rich gravy flavor and balanced spice depth.">
+          <div class="shine"></div>
+          <div class="product-image-wrap"><img src="images/kulambu.png" alt="Kulambu Powder" class="product-image" /></div>
+          <div class="product-content">
+            <span class="category cook">Cooking</span>
+            <h3>Kulambu Powder</h3>
+            <p class="tamil-name">குழம்பு பொடி</p>
+            <p class="product-size">20g • 50g • 100g • More sizes available</p>
+          </div>
+        </article>
+
+        <article class="product-card reveal tilt-card"
+          data-name="Garam Powder"
+          data-tamil="கரம் மசாலா"
+          data-category="Cooking"
+          data-size="20g • 50g • 100g • More sizes available"
+          data-image="images/garam.png"
+          data-desc="Warm and rich garam blend that lifts every curry and masala dish.">
+          <div class="shine"></div>
+          <div class="product-image-wrap"><img src="images/garam.png" alt="Garam Powder" class="product-image" /></div>
+          <div class="product-content">
+            <span class="category cook">Cooking</span>
+            <h3>Garam Powder</h3>
+            <p class="tamil-name">கரம் மசாலா</p>
+            <p class="product-size">20g • 50g • 100g • More sizes available</p>
+          </div>
+        </article>
+
+        <article class="product-card reveal tilt-card"
+          data-name="Sambar Powder"
+          data-tamil="சாம்பார் பொடி"
+          data-category="Cooking"
+          data-size="20g • 50g • 100g • More sizes available"
+          data-image="images/sambar.png"
+          data-desc="Balanced sambar powder for restaurant-style aroma with homemade authenticity.">
+          <div class="shine"></div>
+          <div class="product-image-wrap"><img src="images/sambar.png" alt="Sambar Powder" class="product-image" /></div>
+          <div class="product-content">
+            <span class="category cook">Cooking</span>
+            <h3>Sambar Powder</h3>
+            <p class="tamil-name">சாம்பார் பொடி</p>
+            <p class="product-size">20g • 50g • 100g • More sizes available</p>
+          </div>
+        </article>
+
+        <article class="product-card reveal tilt-card"
+          data-name="Idli Podi"
+          data-tamil="இட்லி பொடி"
+          data-category="Cooking"
+          data-size="20g • 50g • 100g • More sizes available"
+          data-image="images/idli-podi.png"
+          data-desc="Classic idli podi made for breakfast lovers who want bold flavor in every bite.">
+          <div class="shine"></div>
+          <div class="product-image-wrap"><img src="images/idli-podi.png" alt="Idli Podi" class="product-image" /></div>
+          <div class="product-content">
+            <span class="category cook">Cooking</span>
+            <h3>Idli Podi</h3>
+            <p class="tamil-name">இட்லி பொடி</p>
+            <p class="product-size">20g • 50g • 100g • More sizes available</p>
+          </div>
+        </article>
+
+        <!-- SKIN -->
+        <article class="product-card reveal tilt-card"
+          data-name="Bathing Turmeric"
+          data-tamil="குளியல் மஞ்சள்"
+          data-category="Skin Care"
+          data-size="20g • 50g • 100g • More sizes available"
+          data-image="images/bathing-turmeric.png"
+          data-desc="Natural bathing turmeric powder for glowing skin and traditional care.">
+          <div class="shine"></div>
+          <div class="product-image-wrap"><img src="images/bathing-turmeric.png" alt="Bathing Turmeric" class="product-image" /></div>
+          <div class="product-content">
+            <span class="category skin">Skin Care</span>
+            <h3>Bathing Turmeric</h3>
+            <p class="tamil-name">குளியல் மஞ்சள்</p>
+            <p class="product-size">20g • 50g • 100g • More sizes available</p>
+          </div>
+        </article>
+
+        <article class="product-card reveal tilt-card"
+          data-name="Paasipayaru Maavu"
+          data-tamil="பாசிப்பயறு மாவு"
+          data-category="Skin Care"
+          data-size="20g • 50g • 100g • More sizes available"
+          data-image="images/paasipayaru.png"
+          data-desc="Traditional green gram flour for soft skin, natural care, and healthy glow.">
+          <div class="shine"></div>
+          <div class="product-image-wrap"><img src="images/paasipayaru.png" alt="Paasipayaru Maavu" class="product-image" /></div>
+          <div class="product-content">
+            <span class="category skin">Skin Care</span>
+            <h3>Paasipayaru Maavu</h3>
+            <p class="tamil-name">பாசிப்பயறு மாவு</p>
+            <p class="product-size">20g • 50g • 100g • More sizes available</p>
+          </div>
+        </article>
+
+        <article class="product-card reveal tilt-card"
+          data-name="Kadala Maavu"
+          data-tamil="கடலை மாவு"
+          data-category="Skin Care"
+          data-size="20g • 50g • 100g • More sizes available"
+          data-image="images/kadalamaavu.png"
+          data-desc="Natural gram flour for gentle skin cleansing and classic homemade beauty care.">
+          <div class="shine"></div>
+          <div class="product-image-wrap"><img src="images/kadalamaavu.png" alt="Kadala Maavu" class="product-image" /></div>
+          <div class="product-content">
+            <span class="category skin">Skin Care</span>
+            <h3>Kadala Maavu</h3>
+            <p class="tamil-name">கடலை மாவு</p>
+            <p class="product-size">20g • 50g • 100g • More sizes available</p>
+          </div>
+        </article>
+
+        <!-- HAIR -->
+        <article class="product-card reveal tilt-card"
+          data-name="Shikakai Powder"
+          data-tamil="சீக்கைக்காய் பொடி"
+          data-category="Hair Care"
+          data-size="20g • 50g • 100g • More sizes available"
+          data-image="images/shikakai.png"
+          data-desc="Traditional shikakai hair wash powder for natural shine and scalp care.">
+          <div class="shine"></div>
+          <div class="product-image-wrap"><img src="images/shikakai.png" alt="Shikakai Powder" class="product-image" /></div>
+          <div class="product-content">
+            <span class="category hair">Hair Care</span>
+            <h3>Shikakai Powder</h3>
+            <p class="tamil-name">சீக்கைக்காய் பொடி</p>
+            <p class="product-size">20g • 50g • 100g • More sizes available</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about-section" id="about">
+    <div class="container about-grid">
+      <div class="about-left reveal">
+        <span class="section-kicker">About the Brand</span>
+        <h2>Tradition, Care and Authentic Homemade Quality</h2>
+        <p>
+          Jothi Masala is a homemade brand founded by <strong>Nagajothi V</strong>.
+          The focus is simple: authentic taste, trusted quality, and products made with care for Tamil Nadu homes.
+        </p>
+        <p>
+          From masala powders to skin care and hair care products, every packet reflects natural ingredients,
+          traditional preparation, and a premium homemade feel.
+        </p>
+      </div>
+
+      <div class="about-right reveal">
+        <div class="about-card">
+          <h3>Why Jothi Masala?</h3>
+          <ul>
+            <li>Homemade products with care</li>
+            <li>FSSAI certified</li>
+            <li>Cooking, skin care, and hair care range</li>
+            <li>Traditional taste and natural quality</li>
+            <li>Available all over Tamil Nadu</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-kicker">Get In Touch</span>
+        <h2>Contact Jothi Masala</h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card reveal">
+          <h3>Phone</h3>
+          <a href="tel:9025549430">9025549430</a>
+        </div>
+
+        <div class="contact-card reveal">
+          <h3>Email</h3>
+          <a href="mailto:Jothimasala0827@gmail.com">Jothimasala0827@gmail.com</a>
+        </div>
+
+        <div class="contact-card reveal">
+          <h3>Coverage</h3>
+          <p>All Over Tamil Nadu</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>© 2026 Jothi Masala. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Popup -->
+  <div class="popup-backdrop" id="popupBackdrop">
+    <div class="product-popup" id="productPopup">
+      <button class="popup-close" id="popupClose">×</button>
+
+      <div class="popup-left">
+        <img src="" alt="" id="popupImage" />
+      </div>
+
+      <div class="popup-right">
+        <span class="popup-category" id="popupCategory"></span>
+        <h3 id="popupName"></h3>
+        <p class="popup-tamil" id="popupTamil"></p>
+        <p class="popup-desc" id="popupDesc"></p>
+        <p class="popup-size" id="popupSize"></p>
+        <a href="#contact" class="btn btn-primary popup-btn">Contact for Orders</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+</html>
