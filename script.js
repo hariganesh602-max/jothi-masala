@@ -3,7 +3,7 @@ window.addEventListener("load", () => {
   const loader = document.getElementById("loader");
   setTimeout(() => {
     loader.classList.add("hide");
-  }, 1200);
+  }, 900);
 });
 
 // Mobile menu
@@ -15,7 +15,9 @@ menuBtn?.addEventListener("click", () => {
 });
 
 document.querySelectorAll(".nav a").forEach((link) => {
-  link.addEventListener("click", () => body.classList.remove("menu-open"));
+  link.addEventListener("click", () => {
+    body.classList.remove("menu-open");
+  });
 });
 
 // Scroll progress
@@ -24,8 +26,10 @@ const scrollProgress = document.getElementById("scrollProgress");
 function updateScrollProgress() {
   const scrollTop = window.scrollY;
   const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-  const progress = (scrollTop / docHeight) * 100;
-  scrollProgress.style.width = `${progress}%`;
+  const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  if (scrollProgress) {
+    scrollProgress.style.width = `${progress}%`;
+  }
 }
 
 window.addEventListener("scroll", updateScrollProgress);
@@ -35,7 +39,7 @@ window.addEventListener("load", updateScrollProgress);
 const revealItems = document.querySelectorAll(".reveal");
 
 function revealOnScroll() {
-  const trigger = window.innerHeight * 0.88;
+  const trigger = window.innerHeight * 0.9;
 
   revealItems.forEach((item) => {
     const top = item.getBoundingClientRect().top;
@@ -48,39 +52,39 @@ function revealOnScroll() {
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
 
-// Premium hero parallax
-const hero = document.querySelector(".hero");
+// Lightweight parallax only on desktop
 const heroTitle = document.querySelector(".hero-title");
 const heroShowcase = document.querySelector(".hero-showcase");
 
 window.addEventListener("scroll", () => {
+  if (window.innerWidth < 992) return;
+
   const scrolled = window.scrollY;
-  if (hero) {
-    hero.style.transform = `translateY(${scrolled * 0.0}px)`;
-  }
   if (heroTitle) {
-    heroTitle.style.transform = `translateY(${scrolled * 0.16}px)`;
+    heroTitle.style.transform = `translateY(${scrolled * 0.08}px)`;
   }
   if (heroShowcase) {
-    heroShowcase.style.transform = `translateY(${scrolled * 0.1}px)`;
+    heroShowcase.style.transform = `translateY(${scrolled * 0.05}px)`;
   }
 });
 
-// 3D tilt cards
+// Tilt effect only on desktop
 const tiltCards = document.querySelectorAll(".tilt-card");
 
 tiltCards.forEach((card) => {
   card.addEventListener("mousemove", (e) => {
+    if (window.innerWidth < 992) return;
+
     const rect = card.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
     const midX = rect.width / 2;
     const midY = rect.height / 2;
 
-    const rotateY = ((x - midX) / midX) * 8;
-    const rotateX = ((y - midY) / midY) * -8;
+    const rotateY = ((x - midX) / midX) * 7;
+    const rotateX = ((y - midY) / midY) * -7;
 
-    card.style.transform = `perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
+    card.style.transform = `perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
   });
 
   card.addEventListener("mouseleave", () => {
@@ -132,24 +136,23 @@ window.addEventListener("keydown", (e) => {
   }
 });
 
-// Real spice powder animation
+// Background particles
 const canvas = document.getElementById("spiceCanvas");
-const ctx = canvas.getContext("2d");
+const ctx = canvas ? canvas.getContext("2d") : null;
 
-let w, h, dustParticles;
-
-function resizeCanvas() {
-  w = canvas.width = window.innerWidth;
-  h = canvas.height = window.innerHeight;
-  createDust();
-}
+let w = 0;
+let h = 0;
+let dustParticles = [];
 
 function randomBetween(min, max) {
   return Math.random() * (max - min) + min;
 }
 
 function createDust() {
-  const count = Math.max(60, Math.floor((w * h) / 18000));
+  if (!canvas || !ctx) return;
+
+  const densityDivisor = window.innerWidth < 768 ? 26000 : 18000;
+  const count = Math.max(28, Math.floor((w * h) / densityDivisor));
   dustParticles = [];
 
   const colors = [
@@ -164,32 +167,41 @@ function createDust() {
     dustParticles.push({
       x: randomBetween(0, w),
       y: randomBetween(0, h),
-      r: randomBetween(1, 4),
-      vx: randomBetween(-0.25, 0.25),
-      vy: randomBetween(-0.15, -0.55),
-      alpha: randomBetween(0.05, 0.32),
+      r: randomBetween(1, 3.2),
+      vx: randomBetween(-0.18, 0.18),
+      vy: randomBetween(-0.12, -0.42),
+      alpha: randomBetween(0.04, 0.24),
       color: colors[Math.floor(Math.random() * colors.length)],
-      life: randomBetween(80, 220)
+      life: randomBetween(90, 220)
     });
   }
 }
 
+function resizeCanvas() {
+  if (!canvas || !ctx) return;
+  w = canvas.width = window.innerWidth;
+  h = canvas.height = window.innerHeight;
+  createDust();
+}
+
 function updateDust() {
+  if (!canvas || !ctx) return;
+
   ctx.clearRect(0, 0, w, h);
 
   dustParticles.forEach((p) => {
-    p.x += p.vx + Math.sin(p.y * 0.01) * 0.08;
+    p.x += p.vx + Math.sin(p.y * 0.01) * 0.05;
     p.y += p.vy;
     p.life -= 1;
 
     if (p.y < -10 || p.x < -10 || p.x > w + 10 || p.life <= 0) {
       p.x = randomBetween(0, w);
-      p.y = h + randomBetween(10, 120);
-      p.r = randomBetween(1, 4);
-      p.vx = randomBetween(-0.25, 0.25);
-      p.vy = randomBetween(-0.15, -0.55);
-      p.alpha = randomBetween(0.05, 0.32);
-      p.life = randomBetween(80, 220);
+      p.y = h + randomBetween(10, 100);
+      p.r = randomBetween(1, 3.2);
+      p.vx = randomBetween(-0.18, 0.18);
+      p.vy = randomBetween(-0.12, -0.42);
+      p.alpha = randomBetween(0.04, 0.24);
+      p.life = randomBetween(90, 220);
     }
 
     const gradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 5);
