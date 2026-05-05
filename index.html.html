@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jothi Masala – Home Made Goodness | FSSAI Certified | Tamil Nadu</title>
+<meta name="description" content="Jothi Masala – Authentic homemade masala powders, skin care and hair care products. FSSAI certified, trusted across Tamil Nadu. Founded by Nagajothi M.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Cinzel:wght@400;600;700&family=Noto+Sans+Tamil:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  /* ── CSS VARIABLES ─────────────────────────────────── */
+  :root {
+    --crimson:   #8B1A1A;
+    --deep-red:  #6B0F0F;
+    --blood:     #A52020;
+    --gold:      #C9962A;
+    --gold-lt:   #E8B84B;
+    --saffron:   #E85D04;
+    --amber:     #F4A228;
+    --cream:     #FDF6E3;
+    --parchment: #F5E6C8;
+    --dark:      #1A0A0A;
+    --mid:       #2D1515;
+    --text:      #3B1A1A;
+    --muted:     #7A5C5C;
+    --white:     #FFFDF7;
+    --shadow: 0 8px 40px rgba(139,26,26,0.18);
+    --glow: 0 0 30px rgba(201,150,42,0.3);
+  }
+
+  /* ── RESET ─────────────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; font-size: 16px; }
+  body {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    background: var(--cream);
+    color: var(--text);
+    overflow-x: hidden;
+    cursor: default;
+  }
+
+  /* ── SCROLLBAR ──────────────────────────────────────── */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--dark); }
+  ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+  /* ── NOISE TEXTURE OVERLAY ──────────────────────────── */
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none; z-index: 9999; opacity: .4;
+  }
+
+  /* ── NAVBAR ─────────────────────────────────────────── */
+  #navbar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.2rem 4vw;
+    transition: all .4s ease;
+  }
+  #navbar.scrolled {
+    background: rgba(26,10,10,.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201,150,42,.2);
+    padding: .8rem 4vw;
+    box-shadow: 0 4px 30px rgba(0,0,0,.4);
+  }
+  .nav-logo {
+    display: flex; align-items: center; gap: .8rem;
+    text-decoration: none;
+  }
+  .nav-logo img {
+    height: 48px; width: 48px; object-fit: contain;
+    filter: drop-shadow(0 0 8px rgba(201,150,42,.5));
+    transition: transform .3s;
+  }
+  .nav-logo:hover img { transform: rotate(-5deg) scale(1.1); }
+  .nav-logo-text { line-height: 1.1; }
+  .nav-logo-text span:first-child {
+    display: block;
+    font-family: 'Cinzel', serif; font-size: .95rem; font-weight: 700;
+    color: var(--gold-lt); letter-spacing: .12em;
+  }
+  .nav-logo-text span:last-child {
+    display: block; font-size: .7rem; color: rgba(248,230,180,.6);
+    letter-spacing: .2em; text-transform: uppercase;
+  }
+  .nav-links {
+    display: flex; gap: 2.5rem; list-style: none;
+  }
+  .nav-links a {
+    font-family: 'Cinzel', serif; font-size: .75rem; font-weight: 600;
+    color: rgba(253,246,227,.75); text-decoration: none;
+    letter-spacing: .15em; text-transform: uppercase;
+    position: relative; transition: color .3s;
+  }
+  .nav-links a::after {
+    content: ''; position: absolute; bottom: -4px; left: 0; right: 0;
+    height: 1px; background: var(--gold); transform: scaleX(0);
+    transition: transform .3s;
+  }
+  .nav-links a:hover { color: var(--gold-lt); }
+  .nav-links a:hover::after { transform: scaleX(1); }
+  .nav-wa {
+    display: flex; align-items: center; gap: .5rem;
+    background: #25D366; color: #fff; border: none;
+    padding: .55rem 1.2rem; border-radius: 2rem; cursor: pointer;
+    font-family: 'Cinzel', serif; font-size: .7rem; font-weight: 600;
+    letter-spacing: .1em; text-decoration: none;
+    transition: transform .2s, box-shadow .2s;
+    box-shadow: 0 4px 15px rgba(37,211,102,.3);
+  }
+  .nav-wa:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37,211,102,.45); }
+  .hamburger {
+    display: none; flex-direction: column; gap: 5px;
+    cursor: pointer; padding: .3rem;
+  }
+  .hamburger span {
+    display: block; width: 24px; height: 2px; background: var(--gold);
+    transition: all .3s;
+  }
+
+  /* ── HERO ────────────────────────────────────────────── */
+  #hero {
+    position: relative; min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+    background: var(--dark);
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 40%, rgba(139,26,26,.55) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 80% 70%, rgba(201,150,42,.2) 0%, transparent 60%),
+      radial-gradient(ellipse 30% 50% at 20% 30%, rgba(232,93,4,.12) 0%, transparent 60%),
+      linear-gradient(160deg, #1a0a0a 0%, #2d1515 40%, #1a0a0a 100%);
+  }
+  /* Decorative spice circles */
+  .hero-orb {
+    position: absolute; border-radius: 50%;
+    filter: blur(60px); pointer-events: none;
+  }
+  .hero-orb-1 {
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(201,150,42,.12) 0%, transparent 70%);
+    top: -100px; right: -100px;
+    animation: drift 8s ease-in-out infinite alternate;
+  }
+  .hero-orb-2 {
+    width: 350px; height: 350px;
+    background: radial-gradient(circle, rgba(232,93,4,.1) 0%, transparent 70%);
+    bottom: -50px; left: -80px;
+    animation: drift 10s ease-in-out infinite alternate-reverse;
+  }
+  @keyframes drift { from{transform:translate(0,0)} to{transform:translate(20px,20px)} }
+
+  /* Decorative mandala ring */
+  .hero-mandala {
+    position: absolute; right: 6vw; top: 50%;
+    transform: translateY(-50%);
+    width: min(420px, 42vw); height: min(420px, 42vw);
+    opacity: .07;
+    animation: spin 60s linear infinite;
+  }
+  @keyframes spin { to{transform: translateY(-50%) rotate(360deg)} }
+
+  .hero-content {
+    position: relative; z-index: 2;
+    text-align: center; padding: 0 4vw;
+    max-width: 860px;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: .6rem;
+    border: 1px solid rgba(201,150,42,.4); border-radius: 2rem;
+    padding: .35rem 1.2rem; margin-bottom: 2rem;
+    font-family: 'Cinzel', serif; font-size: .7rem; letter-spacing: .2em;
+    color: var(--gold-lt);
+    background: rgba(201,150,42,.08);
+    animation: fadeUp .8s .2s both;
+  }
+  .hero-badge::before {
+    content: '✦'; color: var(--gold); font-size: .6rem;
+  }
+  .hero-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(3.5rem, 10vw, 7rem);
+    font-weight: 700; line-height: .95;
+    color: var(--white);
+    letter-spacing: .06em;
+    text-shadow: 0 4px 30px rgba(0,0,0,.5);
+    animation: fadeUp .8s .35s both;
+  }
+  .hero-title span {
+    display: block; color: transparent;
+    -webkit-text-stroke: 1.5px var(--gold-lt);
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    letter-spacing: .12em;
+  }
+  .hero-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+    color: rgba(253,246,227,.65);
+    margin: 1.5rem 0 .8rem; font-style: italic;
+    animation: fadeUp .8s .5s both;
+  }
+  .hero-catchphrase {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(.8rem, 1.8vw, 1.1rem);
+    color: var(--gold); letter-spacing: .25em;
+    text-transform: uppercase; margin-bottom: 2.5rem;
+    animation: fadeUp .8s .6s both;
+  }
+  .hero-pills {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: .8rem;
+    margin-bottom: 2.8rem;
+    animation: fadeUp .8s .7s both;
+  }
+  .hero-pill {
+    padding: .4rem 1.1rem; border-radius: 2rem;
+    border: 1px solid rgba(201,150,42,.35);
+    font-size: .78rem; color: rgba(253,246,227,.8);
+    letter-spacing: .12em; text-transform: uppercase;
+    font-family: 'Cinzel', serif;
+    background: rgba(139,26,26,.2);
+  }
+  .hero-btns {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;
+    animation: fadeUp .8s .85s both;
+  }
+  .btn-primary {
+    padding: .85rem 2.5rem; border-radius: 3rem;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--amber) 100%);
+    color: var(--dark); border: none; cursor: pointer;
+    font-family: 'Cinzel', serif; font-size: .82rem; font-weight: 700;
+    letter-spacing: .18em; text-transform: uppercase;
+    text-decoration: none; display: inline-block;
+    box-shadow: 0 6px 25px rgba(201,150,42,.4);
+    transition: transform .25s, box-shadow .25s;
+  }
+  .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 35px rgba(201,150,42,.55); }
+  .btn-outline {
+    padding: .82rem 2.5rem; border-radius: 3rem;
+    border: 1.5px solid rgba(201,150,42,.5);
+    color: var(--gold-lt); background: transparent; cursor: pointer;
+    font-family: 'Cinzel', serif; font-size: .82rem; font-weight: 600;
+    letter-spacing: .18em; text-transform: uppercase;
+    text-decoration: none; display: inline-block;
+    transition: all .25s;
+  }
+  .btn-outline:hover { background: rgba(201,150,42,.1); border-color: var(--gold-lt); }
+
+  .hero-floating-imgs {
+    position: absolute; inset: 0; pointer-events: none;
+  }
+  .hero-float {
+    position: absolute;
+    animation: floatImg 5s ease-in-out infinite;
+  }
+  .hero-float img {
+    height: min(200px, 20vw);
+    filter: drop-shadow(0 10px 25px rgba(0,0,0,.5));
+  }
+  .hero-float-1 { left: 4vw; top: 20%; animation-delay: 0s; }
+  .hero-float-2 { right: 4vw; bottom: 20%; animation-delay: -2s; }
+  .hero-float-3 { right: 8vw; top: 15%; animation-delay: -3.5s; }
+  .hero-float-4 { left: 4vw; bottom: 12%; animation-delay: -1.5s; }
+  @keyframes floatImg {
+    0%,100%{transform:translateY(0) rotate(-2deg)}
+    50%{transform:translateY(-16px) rotate(2deg)}
+  }
+  .hero-scroll {
+    position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: .5rem;
+    color: rgba(201,150,42,.6); font-family: 'Cinzel', serif;
+    font-size: .65rem; letter-spacing: .25em; text-transform: uppercase;
+    animation: bounce 2s ease-in-out infinite;
+  }
+  .hero-scroll::after {
+    content: ''; display: block; width: 1px; height: 40px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+  }
+  @keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(6px)} }
+
+  /* ── STATS STRIP ─────────────────────────────────────── */
+  #stats {
+    background: linear-gradient(135deg, var(--deep-red) 0%, var(--crimson) 50%, var(--blood) 100%);
+    padding: 2.2rem 4vw;
+    border-top: 1px solid rgba(201,150,42,.2);
+    border-bottom: 1px solid rgba(201,150,42,.2);
+  }
+  .stats-grid {
+    display: grid; grid-template-columns: repeat(4,1fr);
+    max-width: 900px; margin: 0 auto; gap: 2rem;
+    text-align: center;
+  }
+  .stat-item { position: relative; }
+  .stat-item:not(:last-child)::after {
+    content: ''; position: absolute; right: 0; top: 10%; bottom: 10%;
+    width: 1px; background: rgba(201,150,42,.3);
+  }
+  .stat-num {
+    font-family: 'Cinzel', serif; font-size: clamp(1.6rem, 3vw, 2.4rem);
+    font-weight: 700; color: var(--gold-lt); display: block;
+  }
+  .stat-lbl {
+    font-size: .78rem; color: rgba(253,246,227,.65);
+    letter-spacing: .12em; text-transform: uppercase;
+    font-family: 'Cinzel', serif;
+  }
+
+  /* ── SECTION COMMONS ─────────────────────────────────── */
+  section { position: relative; overflow: hidden; }
+  .section-header { text-align: center; margin-bottom: 4rem; }
+  .section-eyebrow {
+    font-family: 'Cinzel', serif; font-size: .72rem; font-weight: 600;
+    letter-spacing: .3em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: .8rem; display: block;
+  }
+  .section-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 700; line-height: 1.15;
+    color: var(--dark);
+  }
+  .section-title.light { color: var(--white); }
+  .section-divider {
+    display: flex; align-items: center; justify-content: center;
+    gap: 1rem; margin: 1rem 0;
+  }
+  .section-divider::before, .section-divider::after {
+    content: ''; flex: 1; max-width: 80px; height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold));
+  }
+  .section-divider::after { background: linear-gradient(to left, transparent, var(--gold)); }
+  .section-divider span { color: var(--gold); font-size: .7rem; }
+  .section-sub {
+    color: var(--muted); font-size: 1.05rem; max-width: 540px;
+    margin: 1rem auto 0; line-height: 1.7; font-style: italic;
+  }
+  .section-sub.light { color: rgba(253,246,227,.6); }
+
+  /* ── PRODUCTS ────────────────────────────────────────── */
+  #products { background: var(--cream); padding: 7rem 4vw; }
+  .filter-bar {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem;
+    margin-bottom: 3.5rem;
+  }
+  .filter-btn {
+    padding: .5rem 1.5rem; border-radius: 2rem;
+    border: 1.5px solid rgba(139,26,26,.25);
+    background: transparent; cursor: pointer;
+    font-family: 'Cinzel', serif; font-size: .72rem; font-weight: 600;
+    letter-spacing: .12em; color: var(--muted);
+    transition: all .25s;
+  }
+  .filter-btn.active, .filter-btn:hover {
+    background: var(--crimson); border-color: var(--crimson);
+    color: var(--white); box-shadow: 0 4px 15px rgba(139,26,26,.3);
+  }
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr));
+    gap: 1.8rem; max-width: 1200px; margin: 0 auto;
+  }
+  .product-card {
+    background: var(--white);
+    border-radius: 1.2rem;
+    overflow: hidden;
+    border: 1px solid rgba(201,150,42,.15);
+    transition: transform .35s cubic-bezier(.34,1.56,.64,1), box-shadow .35s;
+    cursor: pointer;
+    position: relative;
+  }
+  .product-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(139,26,26,.15), 0 0 0 1px rgba(201,150,42,.25);
+  }
+  .product-card-img {
+    position: relative; height: 200px;
+    background: linear-gradient(135deg, var(--parchment) 0%, #f5dfc0 100%);
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+  }
+  .product-card-img img {
+    height: 140px; object-fit: contain;
+    transition: transform .4s ease;
+    filter: drop-shadow(0 6px 15px rgba(0,0,0,.2));
+  }
+  .product-card:hover .product-card-img img { transform: scale(1.12) rotate(3deg); }
+  .product-cat-tag {
+    position: absolute; top: .8rem; left: .8rem;
+    padding: .28rem .85rem; border-radius: 1rem;
+    font-family: 'Cinzel', serif; font-size: .62rem; font-weight: 700;
+    letter-spacing: .12em; text-transform: uppercase;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 2px 8px rgba(0,0,0,.25);
+  }
+  .tag-cooking  { background: #7a1010; color: #FFE082; border: 1px solid rgba(255,224,130,.3); }
+  .tag-skincare { background: #7a4a00; color: #FFE082; border: 1px solid rgba(255,224,130,.3); }
+  .tag-haircare { background: #1a0a0a; color: #FFE082; border: 1px solid rgba(255,224,130,.3); }
+  .product-card-body { padding: 1.3rem; }
+  .product-card-name {
+    font-family: 'Cinzel', serif; font-size: 1rem; font-weight: 700;
+    color: #1A0A0A; margin-bottom: .3rem;
+    letter-spacing: .03em; line-height: 1.3;
+  }
+  .product-card-tamil {
+    font-family: 'Noto Sans Tamil', sans-serif; font-size: .88rem;
+    color: #5a3a3a; margin-bottom: .8rem; font-weight: 600;
+  }
+  .product-card-sizes {
+    font-size: .75rem; color: rgba(139,26,26,.7);
+    font-family: 'Cinzel', serif; letter-spacing: .06em;
+  }
+  .product-card-cta {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-top: 1.1rem; padding-top: 1rem;
+    border-top: 1px solid rgba(201,150,42,.15);
+  }
+  .product-card-cta span {
+    font-family: 'Cinzel', serif; font-size: .68rem; color: var(--gold);
+    letter-spacing: .1em; text-transform: uppercase;
+  }
+  .product-card-cta button {
+    padding: .38rem .9rem; border-radius: 1.5rem;
+    background: var(--crimson); color: var(--white); border: none;
+    font-family: 'Cinzel', serif; font-size: .65rem; font-weight: 700;
+    letter-spacing: .1em; cursor: pointer;
+    transition: background .2s, transform .2s;
+  }
+  .product-card-cta button:hover { background: var(--blood); transform: scale(1.05); }
+
+  /* ── ABOUT ────────────────────────────────────────────── */
+  #about {
+    background: linear-gradient(160deg, var(--dark) 0%, #2d1515 60%, #1a0a0a 100%);
+    padding: 7rem 4vw;
+    position: relative;
+  }
+  #about::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9962a' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 1;
+  }
+  .about-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 5rem;
+    align-items: center; position: relative; z-index: 1;
+  }
+  .about-visual {
+    position: relative;
+  }
+  .about-img-frame {
+    position: relative;
+    width: 100%; padding-bottom: 110%;
+    border-radius: 1.5rem; overflow: hidden;
+    background: linear-gradient(135deg, var(--crimson) 0%, var(--mid) 100%);
+  }
+  .about-img-frame::before {
+    content: '';
+    position: absolute; inset: -2px;
+    border-radius: 1.5rem;
+    background: linear-gradient(135deg, var(--gold), transparent 50%, var(--gold));
+    z-index: -1;
+  }
+  .about-logo-large {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65%; height: 65%; object-fit: contain;
+    filter: drop-shadow(0 0 30px rgba(201,150,42,.4));
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+  @keyframes pulse-glow {
+    0%,100%{filter:drop-shadow(0 0 20px rgba(201,150,42,.3))}
+    50%{filter:drop-shadow(0 0 45px rgba(201,150,42,.6))}
+  }
+  .about-badge-overlay {
+    position: absolute; bottom: -1.5rem; right: -1.5rem;
+    width: 110px; height: 110px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--amber) 100%);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    box-shadow: 0 8px 30px rgba(201,150,42,.4);
+    text-align: center;
+  }
+  .about-badge-overlay span:first-child {
+    font-family: 'Cinzel', serif; font-size: .65rem; font-weight: 700;
+    color: var(--dark); letter-spacing: .1em; text-transform: uppercase;
+  }
+  .about-badge-overlay span:last-child {
+    font-family: 'Cinzel', serif; font-size: 1rem; font-weight: 700; color: var(--dark);
+  }
+  .about-text { color: var(--white); }
+  .about-text .section-header { text-align: left; margin-bottom: 2rem; }
+  .about-text p {
+    color: rgba(253,246,227,.72); font-size: 1.08rem; line-height: 1.85;
+    margin-bottom: 1.4rem;
+  }
+  .about-text strong { color: var(--gold-lt); }
+  .about-feats {
+    display: grid; grid-template-columns: 1fr 1fr; gap: .9rem;
+    margin-top: 2rem;
+  }
+  .about-feat {
+    display: flex; align-items: flex-start; gap: .7rem;
+    padding: .9rem 1rem; border-radius: .8rem;
+    background: rgba(201,150,42,.07);
+    border: 1px solid rgba(201,150,42,.15);
+    transition: background .25s;
+  }
+  .about-feat:hover { background: rgba(201,150,42,.12); }
+  .about-feat-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: .1rem; }
+  .about-feat-text span {
+    display: block; font-family: 'Cinzel', serif; font-size: .78rem;
+    font-weight: 700; color: var(--gold-lt); letter-spacing: .06em;
+    margin-bottom: .2rem;
+  }
+  .about-feat-text p { font-size: .8rem; color: rgba(253,246,227,.55); margin: 0; }
+
+  /* ── QUALITY SECTION ─────────────────────────────────── */
+  #quality {
+    background: var(--parchment);
+    padding: 7rem 4vw;
+    border-top: 1px solid rgba(201,150,42,.2);
+  }
+  .quality-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 2rem; max-width: 1000px; margin: 0 auto;
+  }
+  .quality-card {
+    text-align: center; padding: 2.5rem 1.8rem;
+    border-radius: 1.2rem;
+    background: var(--white);
+    border: 1px solid rgba(201,150,42,.2);
+    transition: transform .3s, box-shadow .3s;
+  }
+  .quality-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
+  .quality-icon {
+    font-size: 2.8rem; margin-bottom: 1.2rem; display: block;
+  }
+  .quality-card h3 {
+    font-family: 'Cinzel', serif; font-size: 1rem; font-weight: 700;
+    color: var(--dark); margin-bottom: .7rem; letter-spacing: .06em;
+  }
+  .quality-card p { font-size: .9rem; color: var(--muted); line-height: 1.7; }
+
+  /* ── CONTACT ─────────────────────────────────────────── */
+  #contact {
+    background: linear-gradient(160deg, #1a0a0a 0%, var(--mid) 100%);
+    padding: 7rem 4vw;
+    position: relative;
+  }
+  #contact::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 60% 50% at 50% 100%, rgba(139,26,26,.35) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .contact-inner {
+    max-width: 1000px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
+    position: relative; z-index: 1;
+  }
+  .contact-info { color: var(--white); }
+  .contact-info .section-header { text-align: left; }
+  .contact-item {
+    display: flex; align-items: flex-start; gap: 1.2rem;
+    margin-bottom: 2rem;
+    padding: 1.2rem; border-radius: .8rem;
+    background: rgba(201,150,42,.06);
+    border: 1px solid rgba(201,150,42,.14);
+    transition: background .25s;
+  }
+  .contact-item:hover { background: rgba(201,150,42,.1); }
+  .contact-item-icon {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: rgba(201,150,42,.15);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem; flex-shrink: 0;
+  }
+  .contact-item-text span {
+    display: block; font-family: 'Cinzel', serif; font-size: .72rem;
+    color: var(--gold); letter-spacing: .15em; text-transform: uppercase; margin-bottom: .3rem;
+  }
+  .contact-item-text a, .contact-item-text p {
+    color: rgba(253,246,227,.85); font-size: 1rem; text-decoration: none;
+    transition: color .2s;
+  }
+  .contact-item-text a:hover { color: var(--gold-lt); }
+
+  .contact-form { position: relative; z-index: 1; }
+  .form-group { margin-bottom: 1.2rem; }
+  .form-group input, .form-group textarea, .form-group select {
+    width: 100%; padding: .85rem 1.2rem;
+    background: rgba(253,246,227,.06);
+    border: 1.5px solid rgba(201,150,42,.2);
+    border-radius: .6rem; color: var(--white);
+    font-family: 'Cormorant Garamond', serif; font-size: 1rem;
+    transition: border-color .2s, background .2s;
+    outline: none;
+  }
+  .form-group input::placeholder, .form-group textarea::placeholder {
+    color: rgba(253,246,227,.3);
+  }
+  .form-group input:focus, .form-group textarea:focus {
+    border-color: var(--gold); background: rgba(201,150,42,.07);
+  }
+  .form-group textarea { min-height: 120px; resize: vertical; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .form-submit {
+    width: 100%; padding: 1rem;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--amber) 100%);
+    border: none; border-radius: .6rem; cursor: pointer;
+    font-family: 'Cinzel', serif; font-size: .85rem; font-weight: 700;
+    color: var(--dark); letter-spacing: .18em; text-transform: uppercase;
+    transition: transform .2s, box-shadow .2s;
+    box-shadow: 0 6px 20px rgba(201,150,42,.35);
+  }
+  .form-submit:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(201,150,42,.5); }
+
+  /* ── FOOTER ──────────────────────────────────────────── */
+  footer {
+    background: #0e0505;
+    border-top: 1px solid rgba(201,150,42,.2);
+    padding: 3rem 4vw 2rem;
+  }
+  .footer-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(201,150,42,.12);
+  }
+  .footer-brand { }
+  .footer-logo {
+    display: flex; align-items: center; gap: .8rem; margin-bottom: 1rem;
+  }
+  .footer-logo img { height: 50px; object-fit: contain; }
+  .footer-logo-name {
+    font-family: 'Cinzel', serif; font-size: 1.1rem; font-weight: 700; color: var(--gold-lt);
+    letter-spacing: .1em;
+  }
+  .footer-brand p {
+    color: rgba(253,246,227,.45); font-size: .9rem; line-height: 1.75; max-width: 280px;
+  }
+  .footer-social {
+    display: flex; gap: .8rem; margin-top: 1.4rem;
+  }
+  .social-btn {
+    width: 38px; height: 38px; border-radius: 50%;
+    background: rgba(201,150,42,.1);
+    border: 1px solid rgba(201,150,42,.2);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--gold); text-decoration: none; font-size: 1rem;
+    transition: background .2s, transform .2s;
+  }
+  .social-btn:hover { background: var(--gold); color: var(--dark); transform: scale(1.1); }
+  .footer-col h4 {
+    font-family: 'Cinzel', serif; font-size: .78rem; font-weight: 700;
+    color: var(--gold); letter-spacing: .2em; text-transform: uppercase;
+    margin-bottom: 1.2rem;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: .6rem; }
+  .footer-col ul li a {
+    color: rgba(253,246,227,.45); font-size: .88rem; text-decoration: none;
+    transition: color .2s;
+  }
+  .footer-col ul li a:hover { color: var(--gold-lt); }
+  .footer-bottom {
+    max-width: 1100px; margin: 1.5rem auto 0;
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+  }
+  .footer-bottom p {
+    color: rgba(253,246,227,.3); font-size: .8rem;
+    font-family: 'Cinzel', serif; letter-spacing: .08em;
+  }
+  .footer-fssai {
+    padding: .35rem 1rem; border-radius: 1rem;
+    border: 1px solid rgba(201,150,42,.3);
+    color: rgba(201,150,42,.7); font-family: 'Cinzel', serif;
+    font-size: .68rem; letter-spacing: .12em;
+  }
+
+  /* ── WHATSAPP FLOAT ──────────────────────────────────── */
+  .wa-float {
+    position: fixed; bottom: 2rem; right: 2rem; z-index: 900;
+    width: 58px; height: 58px; border-radius: 50%;
+    background: #25D366;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 6px 25px rgba(37,211,102,.45);
+    text-decoration: none; color: #fff;
+    font-size: 1.7rem;
+    transition: transform .25s, box-shadow .25s;
+    animation: wa-pulse 2.5s ease-in-out infinite;
+  }
+  .wa-float:hover { transform: scale(1.12); box-shadow: 0 10px 35px rgba(37,211,102,.6); animation: none; }
+  @keyframes wa-pulse {
+    0%,100%{box-shadow:0 6px 25px rgba(37,211,102,.45)}
+    50%{box-shadow:0 6px 25px rgba(37,211,102,.45), 0 0 0 10px rgba(37,211,102,.1)}
+  }
+
+  /* ── MODAL ───────────────────────────────────────────── */
+  .modal-overlay {
+    position: fixed; inset: 0; z-index: 2000;
+    background: rgba(10,4,4,.88);
+    backdrop-filter: blur(8px);
+    display: flex; align-items: center; justify-content: center;
+    padding: 1rem;
+    opacity: 0; pointer-events: none;
+    transition: opacity .35s;
+  }
+  .modal-overlay.open { opacity: 1; pointer-events: all; }
+  .modal {
+    background: var(--white);
+    border-radius: 1.5rem;
+    max-width: 550px; width: 100%;
+    overflow: hidden;
+    transform: scale(.9); transition: transform .35s;
+    box-shadow: 0 30px 80px rgba(0,0,0,.5);
+    border: 1px solid rgba(201,150,42,.2);
+  }
+  .modal-overlay.open .modal { transform: scale(1); }
+  .modal-img {
+    height: 240px;
+    background: linear-gradient(135deg, var(--parchment), #f5dfc0);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .modal-img img { height: 160px; object-fit: contain; filter: drop-shadow(0 8px 20px rgba(0,0,0,.2)); }
+  .modal-body { padding: 2rem; }
+  .modal-cat { font-family: 'Cinzel', serif; font-size: .65rem; letter-spacing: .2em; color: var(--gold); text-transform: uppercase; }
+  .modal-name { font-family: 'Cinzel', serif; font-size: 1.7rem; font-weight: 700; color: var(--dark); margin: .3rem 0; }
+  .modal-tamil { font-family: 'Noto Sans Tamil', sans-serif; font-size: 1rem; color: var(--muted); margin-bottom: 1rem; }
+  .modal-desc { font-size: .95rem; color: var(--muted); line-height: 1.7; margin-bottom: 1.5rem; }
+  .modal-sizes { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1.5rem; }
+  .modal-size-tag {
+    padding: .3rem .8rem; border-radius: 1rem;
+    border: 1.5px solid rgba(201,150,42,.35);
+    font-family: 'Cinzel', serif; font-size: .72rem; color: var(--crimson); letter-spacing: .08em;
+  }
+  .modal-close {
+    position: absolute; top: 1rem; right: 1rem;
+    width: 36px; height: 36px; border-radius: 50%;
+    background: rgba(0,0,0,.3); border: none; cursor: pointer;
+    color: #fff; font-size: 1.1rem; display: flex; align-items: center; justify-content: center;
+    transition: background .2s;
+  }
+  .modal-close:hover { background: rgba(0,0,0,.5); }
+  .modal-wa-btn {
+    display: flex; align-items: center; justify-content: center; gap: .5rem;
+    width: 100%; padding: .9rem;
+    background: #25D366; color: #fff; border: none;
+    border-radius: .6rem; cursor: pointer;
+    font-family: 'Cinzel', serif; font-size: .82rem; font-weight: 700;
+    letter-spacing: .12em; text-decoration: none;
+    transition: background .2s;
+  }
+  .modal-wa-btn:hover { background: #1fa855; }
+
+  /* ── ANIMATIONS ──────────────────────────────────────── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .reveal {
+    opacity: 0; transform: translateY(30px);
+    transition: opacity .7s ease, transform .7s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: .1s; }
+  .reveal-delay-2 { transition-delay: .2s; }
+  .reveal-delay-3 { transition-delay: .3s; }
+  .reveal-delay-4 { transition-delay: .4s; }
+
+  /* ── MOBILE NAV ──────────────────────────────────────── */
+  .mobile-nav {
+    display: none;
+    position: fixed; inset: 0; z-index: 999;
+    background: rgba(10,4,4,.97);
+    flex-direction: column; align-items: center; justify-content: center;
+    gap: 2.5rem;
+  }
+  .mobile-nav.open { display: flex; }
+  .mobile-nav a {
+    font-family: 'Cinzel', serif; font-size: 1.5rem; font-weight: 700;
+    color: var(--gold-lt); text-decoration: none; letter-spacing: .2em;
+    transition: color .2s;
+  }
+  .mobile-nav a:hover { color: var(--gold); }
+  .mobile-nav-close {
+    position: absolute; top: 1.5rem; right: 1.5rem;
+    background: none; border: none; color: var(--gold);
+    font-size: 1.8rem; cursor: pointer;
+  }
+
+  /* ── RESPONSIVE ──────────────────────────────────────── */
+  @media (max-width: 900px) {
+    .hero-float { display: none; }
+    .hero-mandala { display: none; }
+    .stats-grid { grid-template-columns: repeat(2,1fr); }
+    .about-inner { grid-template-columns: 1fr; gap: 3rem; }
+    .about-visual { max-width: 380px; margin: 0 auto; }
+    .quality-grid { grid-template-columns: 1fr 1fr; }
+    .contact-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .footer-bottom { flex-direction: column; align-items: flex-start; }
+  }
+  @media (max-width: 640px) {
+    .nav-links, .nav-wa { display: none; }
+    .hamburger { display: flex; }
+    .stats-grid { grid-template-columns: repeat(2,1fr); gap: 1rem; }
+    .quality-grid { grid-template-columns: 1fr; }
+    .about-feats { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    #hero { min-height: 100svh; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══ NAVBAR ══════════════════════════════════════════ -->
+<nav id="navbar">
+  <a href="#home" class="nav-logo">
+    <img src="https://jothi-masala.vercel.app/images/logo.png" alt="Jothi Masala Logo" onerror="this.style.display='none'">
+    <div class="nav-logo-text">
+      <span>Jothi Masala</span>
+      <span>Home Made Goodness</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="https://wa.me/919025549430" class="nav-wa" target="_blank" rel="noopener">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.553 4.1 1.523 5.824L0 24l6.335-1.505A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.795 9.795 0 01-5.003-1.376l-.36-.213-3.72.883.9-3.634-.234-.373A9.77 9.77 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+    WhatsApp
+  </a>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- Mobile nav -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-nav-close" onclick="toggleMenu()">✕</button>
+  <a href="#home" onclick="toggleMenu()">Home</a>
+  <a href="#products" onclick="toggleMenu()">Products</a>
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+  <a href="https://wa.me/919025549430" target="_blank" rel="noopener" style="color:#25D366">📲 WhatsApp</a>
+</div>
+
+<!-- ══ HERO ════════════════════════════════════════════ -->
+<section id="home">
+  <div id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+
+    <!-- Mandala SVG -->
+    <svg class="hero-mandala" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="200" cy="200" r="195" stroke="#C9962A" stroke-width="1"/>
+      <circle cx="200" cy="200" r="160" stroke="#C9962A" stroke-width=".5" stroke-dasharray="4 6"/>
+      <circle cx="200" cy="200" r="120" stroke="#C9962A" stroke-width="1"/>
+      <circle cx="200" cy="200" r="80" stroke="#C9962A" stroke-width=".5"/>
+      <circle cx="200" cy="200" r="40" stroke="#C9962A" stroke-width="1"/>
+      <g stroke="#C9962A" stroke-width=".5">
+        <line x1="200" y1="5" x2="200" y2="395"/>
+        <line x1="5" y1="200" x2="395" y2="200"/>
+        <line x1="60" y1="60" x2="340" y2="340"/>
+        <line x1="340" y1="60" x2="60" y2="340"/>
+        <line x1="5" y1="115" x2="395" y2="285"/>
+        <line x1="5" y1="285" x2="395" y2="115"/>
+        <line x1="115" y1="5" x2="285" y2="395"/>
+        <line x1="285" y1="5" x2="115" y2="395"/>
+      </g>
+      <polygon points="200,40 215,190 200,360 185,190" stroke="#C9962A" stroke-width=".5" fill="none"/>
+      <polygon points="40,200 190,215 360,200 190,185" stroke="#C9962A" stroke-width=".5" fill="none"/>
+    </svg>
+
+    <!-- Floating product images -->
+    <div class="hero-floating-imgs">
+      <div class="hero-float hero-float-1">
+        <img src="https://jothi-masala.vercel.app/images/turmeric.png" alt="Turmeric" onerror="this.style.display='none'">
+      </div>
+      <div class="hero-float hero-float-2">
+        <img src="https://jothi-masala.vercel.app/images/sambar.png" alt="Sambar" onerror="this.style.display='none'">
+      </div>
+      <div class="hero-float hero-float-3">
+        <img src="https://jothi-masala.vercel.app/images/red-chilli.png" alt="Chilli" onerror="this.style.display='none'">
+      </div>
+      <div class="hero-float hero-float-4">
+        <img src="https://jothi-masala.vercel.app/images/garam.png" alt="Garam Masala" onerror="this.style.display='none'">
+      </div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge">FSSAI Certified &nbsp;·&nbsp; Home Made &nbsp;·&nbsp; Tamil Nadu</div>
+      <h1 class="hero-title">
+        JOTHI
+        <span>MASALA</span>
+      </h1>
+      <p class="hero-tagline">Authentic taste, trusted quality — from our home to yours.</p>
+      <div class="hero-catchphrase">ஜோதி மசாலா இருக்கு... ஹோட்டல் எதுக்கு...?</div>
+      <div class="hero-pills">
+        <span class="hero-pill">🌶 Cooking Masalas</span>
+        <span class="hero-pill">✨ Skin Care</span>
+        <span class="hero-pill">💆 Hair Care</span>
+        <span class="hero-pill">🏪 All Over Tamil Nadu</span>
+      </div>
+      <div class="hero-btns">
+        <a href="#products" class="btn-primary">Explore Products</a>
+        <a href="#contact" class="btn-outline">Contact Us</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll">Scroll</div>
+  </div>
+</section>
+
+<!-- ══ STATS ═══════════════════════════════════════════ -->
+<div id="stats">
+  <div class="stats-grid">
+    <div class="stat-item reveal">
+      <span class="stat-num">13+</span>
+      <span class="stat-lbl">Products</span>
+    </div>
+    <div class="stat-item reveal reveal-delay-1">
+      <span class="stat-num">3</span>
+      <span class="stat-lbl">Categories</span>
+    </div>
+    <div class="stat-item reveal reveal-delay-2">
+      <span class="stat-num">FSSAI</span>
+      <span class="stat-lbl">Certified</span>
+    </div>
+    <div class="stat-item reveal reveal-delay-3">
+      <span class="stat-num">TN</span>
+      <span class="stat-lbl">Pan Tamil Nadu</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══ PRODUCTS ════════════════════════════════════════ -->
+<section id="products">
+  <div class="section-header reveal">
+    <span class="section-eyebrow">Our Collection</span>
+    <h2 class="section-title">Premium Product Range</h2>
+    <div class="section-divider"><span>✦</span></div>
+    <p class="section-sub">Traditional masala, natural skin care, and hair care products — crafted with quality and care by Nagajothi M.</p>
+  </div>
+
+  <div class="filter-bar reveal">
+    <button class="filter-btn active" data-filter="all">All Products</button>
+    <button class="filter-btn" data-filter="cooking">🌶 Cooking</button>
+    <button class="filter-btn" data-filter="skincare">✨ Skin Care</button>
+    <button class="filter-btn" data-filter="haircare">💆 Hair Care</button>
+  </div>
+
+  <div class="products-grid" id="productsGrid">
+    <!-- COOKING -->
+    <div class="product-card" data-cat="cooking" onclick="openModal(this)" data-name="Turmeric Powder" data-tamil="மஞ்சள் தூள்" data-img="https://jothi-masala.vercel.app/images/turmeric.png" data-desc="Pure, vibrant turmeric powder sourced and ground traditionally. A staple in every Tamil Nadu kitchen — known for its rich colour, earthy flavour, and numerous health benefits.">
+      <div class="product-card-img">
+        <span class="product-cat-tag tag-cooking">Cooking</span>
+        <img src="https://jothi-masala.vercel.app/images/turmeric.png" alt="Turmeric Powder" onerror="this.style.opacity='.3'">
+      </div>
+      <div class="product-card-body">
+        <div class="product-card-name">Turmeric Powder</div>
+        <div class="product-card-tamil">மஞ்சள் தூள்</div>
+        <div class="product-card-sizes">20g · 50g · 100g · More sizes</div>
+        <div class="product-card-cta">
+          <span>View Details</span>
+          <button>Order Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card" data-cat="cooking" onclick="openModal(this)" data-name="Red Chilli Powder" data-tamil="வர மிளகாய் பொடி" data-img="https://jothi-masala.vercel.app/images/red-chilli.png" data-desc="Bold, fiery red chilli powder made from premium dried red chillies. Delivers vibrant colour and the perfect heat level that Tamil Nadu cooking demands.">
+      <div class="product-card-img">
+        <span class="product-cat-tag tag-cooking">Cooking</span>
+        <img src="https://jothi-masala.vercel.app/images/red-chilli.png" alt="Red Chilli Powder" onerror="this.style.opacity='.3'">
+      </div>
+      <div class="product-card-body">
+        <div class="product-card-name">Red Chilli Powder</div>
+        <div class="product-card-tamil">வர மிளகாய் பொடி</div>
+        <div class="product-card-sizes">20g · 50g · 100g · More sizes</div>
+        <div class="product-card-cta"><span>View Details</span><button>Order Now</button></div>
+      </div>
+    </div>
+
+    <div class="product-card" data-cat="cooking" onclick="openModal(this)" data-name="Anise Powder" data-tamil="சோம்பு தூள்" data-img="https://jothi-masala.vercel.app/images/anise.png" data-desc="Freshly ground anise (saunf) powder with a naturally sweet, aromatic flavour. Widely used in Tamil Nadu gravies, biryanis, and marinades.">
+      <div class="product-card-img">
+        <span class="product-cat-tag tag-cooking">Cooking</span>
+        <img src="https://jothi-masala.vercel.app/images/anise.png" alt="Anise Powder" onerror="this.style.opacity='.3'">
+      </div>
+      <div class="product-card-body">
+        <div class="product-card-name">Anise Powder</div>
+        <div class="product-card-tamil">சோம்பு தூள்</div>
+        <div class="product-card-sizes">20g · 50g · 100g · More sizes</div>
+        <div class="product-card-cta"><span>View Details</span><button>Order Now</button></div>
+      </div>
+    </div>
+
+    <div class="product-card" data-cat="cooking" onclick="openModal(this)" data-name="Cumin Powder" data-tamil="சீரக தூள்" data-img="https://jothi-masala.vercel.app/images/cumin.png" data-desc="Stone-ground cumin powder with its warm, earthy character. An essential spice in rasam, sambar, chutneys, and all traditional Tamil cooking.">
+      <div class="product-card-img">
+        <span class="product-cat-tag tag-cooking">Cooking</span>
+        <img src="https://jothi-masala.vercel.app/images/cumin.png" alt="Cumin Powder" onerror="this.style.opacity='.3'">
+      </div>
+      <div class="product-card-body">
+        <div class="product-card-name">Cumin Powder</div>
+        <div class="product-card-tamil">சீரக தூள்</div>
+        <div class="product-card-sizes">20g · 50g · 100g · More sizes</div>
+        <div class="product-card-cta"><span>View Details</span><button>Order Now</button></div>
+      </div>
+    </div>
+
+    <div class="product-card" data-cat="cooking" onclick="openModal(this)" data-name="Pepper Powder" data-tamil="மிளகு தூள்" data-img="https://jothi-masala.vercel.app/images/pepper.png" data-desc="Coarsely or finely ground black pepper for robust pungency. From pepper rasam to grilled meats — this is one indispensable homemade spice.">
+      <div class="product-card-img">
+        <span class="product-cat-tag tag-cooking">Cooking</span>
+        <img src="https://jothi-masala.vercel.app/images/pepper.png" alt="Pepper Powder" onerror="this.style.opacity='.3'">
+      </div>
+      <div class="product-card-body">
+        <div class="product-card-name">Pepper Powder</div>
+        <div class="product-card-tamil">மிளகு தூள்</div>
+        <div class="product-card-sizes">20g · 50g · 100g · More sizes</div>
+        <div class="product-card-cta"><span>View Details</span><button>Order Now</button></div>
+      </div>
+    </div>
+
+    <div class="product-card" data-cat="cooking" onclick="openModal(this)" data-name="Kulambu Powder" data-tamil="குழம்பு பொடி" data-img="https://jothi-masala.vercel.app/images/kulambu.png" data-desc="A secret-recipe blend of spices for the perfect Tamil-style kuzhambu. Rich, complex, and deeply aromatic — just like Paati's kitchen.">
+      <div class="product-card-img">
+        <span class="product-cat-tag tag-cooking">Cooking</span>
+        <img src="https://jothi-masala.vercel.app/images/kulambu.png" alt="Kulambu Powder" onerror="this.style.opacity='.3'">
+      </div>
+      <div class="product-card-body">
+        <div class="product-card-name">Kulambu Powder</div>
+        <div class="product-card-tamil">குழம்பு பொடி</div>
+        <div class="product-card-sizes">20g · 50g · 100g · More sizes</div>
+        <div class="product-card-cta"><span>View Details</span><button>Order Now</button></div>
+      </div>
+    </div>
+
+    <div class="product-card" data-cat="cooking" onclick="openModal(this)" data-name="Garam Masala" data-tamil="கரம் மசாலா" data-img="https://jothi-masala.vercel.app/images/garam.png" data-desc="A warming whole-spice blend hand-crafted for depth and complexity. Pairs beautifully with biryanis, curries, and marinades.">
+      <div class="product-card-img">
+        <span class="product-cat-tag tag-cooking">Cooking</span>
+        <img src="https://jothi-masala.vercel.app/images/garam.png" alt="Garam Masala" onerror="this.style.opacity='.3'">
+      </div>
+      <div class="product-card-body">
+        <div class="product-card-name">Garam Masala</div>
+        <div class="product-card-tamil">கரம் மசாலா</div>
+        <div class="product-card-sizes">20g · 50g · 100g · More sizes</div>
+        <div class="product-card-cta"><span>View Details</span><button>Order Now</button></div>
+      </div>
+    </div>
+
+    <div class="product-card" data-cat="cooking" onclick="openModal(this)" data-name="Sambar Powder" data-tamil="சாம்பார் பொடி" data-img="https://jothi-masala.vercel.app/images/sambar.png" data-desc="Authentic homemade sambar powder crafted from a curated spice blend. Brings the true tangy, robust soul of Tamil Nadu sambar to your daily cooking.">
+      <div class="product-card-img">
+        <span class="product-cat-tag tag-cooking">Cooking</span>
+        <img src="https://jothi-masala.vercel.app/images/sambar.png" alt="Sambar Powder" onerror="this.style.opacity='.3'">
+      </div>
+      <div class="product-card-body">
+        <div class="product-card-name">Sambar Powder</div>
+        <div class="product-card-tamil">சாம்பார் பொடி</div>
+        <div class="product-card-sizes">20g · 50g · 100g · More sizes</div>
+        <div class="product-card-cta"><span>View Details</span><button>Order Now</button></div>
+      </div>
+    </div>
+
+    <div class="product-card" data-cat="cooking" onclick="openModal(this)" data-name="Idli Podi" data-tamil="இட்லி பொடி" data-img="https://jothi-masala.vercel.app/images/idli-podi.png" data-desc="Crunchy, spiced sesame-lentil powder — the essential companion for idli and dosa. A morning staple crafted fresh with every batch.">
+      <div class="product-card-img">
+        <span class="product-cat-tag tag-cooking">Cooking</span>
+        <img src="https://jothi-masala.vercel.app/images/idli-podi.png" alt="Idli Podi" onerror="this.style.opacity='.3'">
+      </div>
+      <div class="product-card-body">
+        <div class="product-card-name">Idli Podi</div>
+        <div class="product-card-tamil">இட்லி பொடி</div>
+        <div class="product-card-sizes">20g · 50g · 100g · More sizes</div>
+        <div class="product-card-cta"><span>View Details</span><button>Order Now</button></div>
+      </div>
+    </div>
+
+    <!-- SKINCARE -->
+    <div class="product-card" data-cat="skincare" onclick="openModal(this)" data-name="Bathing Turmeric" data-tamil="குளியல் மஞ்சள்" data-img="https://jothi-masala.vercel.app/images/bathing-turmeric.png" data-desc="Raw, unprocessed turmeric for traditional bathing rituals. Known since ancient times for brightening skin tone, healing blemishes, and providing a natural glow.">
+      <div class="product-card-img">
+        <span class="product-cat-tag tag-skincare">Skin Care</span>
+        <img src="https://jothi-masala.vercel.app/images/bathing-turmeric.png" alt="Bathing Turmeric" onerror="this.style.opacity='.3'">
+      </div>
+      <div class="product-card-body">
+        <div class="product-card-name">Bathing Turmeric</div>
+        <div class="product-card-tamil">குளியல் மஞ்சள்</div>
+        <div class="product-card-sizes">20g · 50g · 100g · More sizes</div>
+        <div class="product-card-cta"><span>View Details</span><button>Order Now</button></div>
+      </div>
+    </div>
+
+    <div class="product-card" data-cat="skincare" onclick="openModal(this)" data-name="Paasipayaru Maavu" data-tamil="பாசிப்பயறு மாவு" data-img="https://jothi-masala.vercel.app/images/paasipayaru.png" data-desc="Traditional moong dal face and body powder. A gentle natural cleanser that exfoliates, softens, and nourishes skin — the way our grandmothers always did it.">
+      <div class="product-card-img">
+        <span class="product-cat-tag tag-skincare">Skin Care</span>
+        <img src="https://jothi-masala.vercel.app/images/paasipayaru.png" alt="Paasipayaru Maavu" onerror="this.style.opacity='.3'">
+      </div>
+      <div class="product-card-body">
+        <div class="product-card-name">Paasipayaru Maavu</div>
+        <div class="product-card-tamil">பாசிப்பயறு மாவு</div>
+        <div class="product-card-sizes">20g · 50g · 100g · More sizes</div>
+        <div class="product-card-cta"><span>View Details</span><button>Order Now</button></div>
+      </div>
+    </div>
+
+    <div class="product-card" data-cat="skincare" onclick="openModal(this)" data-name="Kadala Maavu" data-tamil="கடலை மாவு" data-img="https://jothi-masala.vercel.app/images/kadalamaavu.png" data-desc="Chickpea flour for natural skin care. Removes oil, brightens complexion, and tones skin — a time-tested beauty secret from Tamil Nadu households.">
+      <div class="product-card-img">
+        <span class="product-cat-tag tag-skincare">Skin Care</span>
+        <img src="https://jothi-masala.vercel.app/images/kadalamaavu.png" alt="Kadala Maavu" onerror="this.style.opacity='.3'">
+      </div>
+      <div class="product-card-body">
+        <div class="product-card-name">Kadala Maavu</div>
+        <div class="product-card-tamil">கடலை மாவு</div>
+        <div class="product-card-sizes">20g · 50g · 100g · More sizes</div>
+        <div class="product-card-cta"><span>View Details</span><button>Order Now</button></div>
+      </div>
+    </div>
+
+    <!-- HAIRCARE -->
+    <div class="product-card" data-cat="haircare" onclick="openModal(this)" data-name="Shikakai Powder" data-tamil="சீக்கைக்காய் பொடி" data-img="https://jothi-masala.vercel.app/images/shikakai.png" data-desc="Pure shikakai powder — nature's gentle shampoo. Deeply cleanses scalp, reduces hair fall, adds natural shine, and promotes healthy hair growth without harsh chemicals.">
+      <div class="product-card-img">
+        <span class="product-cat-tag tag-haircare">Hair Care</span>
+        <img src="https://jothi-masala.vercel.app/images/shikakai.png" alt="Shikakai Powder" onerror="this.style.opacity='.3'">
+      </div>
+      <div class="product-card-body">
+        <div class="product-card-name">Shikakai Powder</div>
+        <div class="product-card-tamil">சீக்கைக்காய் பொடி</div>
+        <div class="product-card-sizes">20g · 50g · 100g · More sizes</div>
+        <div class="product-card-cta"><span>View Details</span><button>Order Now</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ABOUT ════════════════════════════════════════════ -->
+<section id="about">
+  <div class="about-inner">
+    <div class="about-visual reveal">
+      <div class="about-img-frame">
+        <img class="about-logo-large" src="https://jothi-masala.vercel.app/images/logo.png" alt="Jothi Masala" onerror="this.style.opacity='.3'">
+      </div>
+      <div class="about-badge-overlay">
+        <span>FSSAI</span>
+        <span>✓ Cert.</span>
+      </div>
+    </div>
+    <div class="about-text">
+      <div class="section-header">
+        <span class="section-eyebrow">About the Brand</span>
+        <h2 class="section-title light">Tradition, Care &amp;<br>Authentic Homemade Quality</h2>
+        <div class="section-divider"><span>✦</span></div>
+      </div>
+      <p>
+        <strong>Jothi Masala</strong> is a proudly homemade brand founded by <strong>Nagajothi M</strong> — a name built on trust, taste, and tradition. The vision is simple: bring the authentic flavours of the Tamil Nadu kitchen and the time-tested secrets of natural beauty to every home.
+      </p>
+      <p>
+        From freshly ground masala powders to traditional skin and hair care formulations, every packet of Jothi Masala is prepared with care, using natural ingredients and traditional methods. No shortcuts. No compromises.
+      </p>
+      <p style="font-style:italic; color: rgba(201,150,42,.7);">
+        "ஜோதி மசாலா இருக்கு... ஹோட்டல் எதுக்கு...?"
+      </p>
+      <div class="about-feats">
+        <div class="about-feat">
+          <span class="about-feat-icon">🏠</span>
+          <div class="about-feat-text">
+            <span>Home Made</span>
+            <p>Every product made with personal care and attention</p>
+          </div>
+        </div>
+        <div class="about-feat">
+          <span class="about-feat-icon">✅</span>
+          <div class="about-feat-text">
+            <span>FSSAI Certified</span>
+            <p>Quality assured, government approved</p>
+          </div>
+        </div>
+        <div class="about-feat">
+          <span class="about-feat-icon">🌿</span>
+          <div class="about-feat-text">
+            <span>Natural Ingredients</span>
+            <p>No artificial additives or preservatives</p>
+          </div>
+        </div>
+        <div class="about-feat">
+          <span class="about-feat-icon">🗺️</span>
+          <div class="about-feat-text">
+            <span>Pan Tamil Nadu</span>
+            <p>Available and delivered across Tamil Nadu</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ QUALITY ══════════════════════════════════════════ -->
+<section id="quality">
+  <div style="max-width:1100px; margin:0 auto;">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Why Jothi Masala</span>
+      <h2 class="section-title">Our Promise to You</h2>
+      <div class="section-divider"><span>✦</span></div>
+    </div>
+    <div class="quality-grid">
+      <div class="quality-card reveal">
+        <span class="quality-icon">🌾</span>
+        <h3>Traditional Preparation</h3>
+        <p>Every masala is prepared using traditional grinding and blending methods — preserving the authentic taste that no factory can replicate.</p>
+      </div>
+      <div class="quality-card reveal reveal-delay-1">
+        <span class="quality-icon">🔬</span>
+        <h3>FSSAI Certified Quality</h3>
+        <p>Jothi Masala products are FSSAI certified, ensuring you get safe, hygienic, and quality-verified products every time.</p>
+      </div>
+      <div class="quality-card reveal reveal-delay-2">
+        <span class="quality-icon">🌿</span>
+        <h3>Pure Natural Ingredients</h3>
+        <p>Only carefully sourced, natural ingredients go into every packet. No artificial colours, no preservatives, no compromise.</p>
+      </div>
+      <div class="quality-card reveal reveal-delay-3">
+        <span class="quality-icon">💝</span>
+        <h3>Made with Care</h3>
+        <p>Founded and run by Nagajothi M — every product carries the love and precision of a home cook who cares deeply about quality.</p>
+      </div>
+      <div class="quality-card reveal reveal-delay-1">
+        <span class="quality-icon">📦</span>
+        <h3>Multiple Pack Sizes</h3>
+        <p>Available in 20g, 50g, 100g and more — catering to individual homes, families, and small food businesses alike.</p>
+      </div>
+      <div class="quality-card reveal reveal-delay-2">
+        <span class="quality-icon">🚚</span>
+        <h3>All Over Tamil Nadu</h3>
+        <p>Serving customers across the entire state of Tamil Nadu — bringing authentic homemade masala to your doorstep.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ══════════════════════════════════════════ -->
+<section id="contact">
+  <div class="contact-inner">
+    <div class="contact-info">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Get In Touch</span>
+        <h2 class="section-title light">Contact Jothi Masala</h2>
+        <div class="section-divider"><span>✦</span></div>
+        <p class="section-sub light">Ready to order or have a question? Reach out — we'd love to hear from you.</p>
+      </div>
+      <div class="contact-item reveal">
+        <div class="contact-item-icon">📞</div>
+        <div class="contact-item-text">
+          <span>Phone</span>
+          <a href="tel:9025549430">9025549430</a>
+        </div>
+      </div>
+      <div class="contact-item reveal reveal-delay-1">
+        <div class="contact-item-icon">✉️</div>
+        <div class="contact-item-text">
+          <span>Email</span>
+          <a href="mailto:Jothimasala0827@gmail.com">Jothimasala0827@gmail.com</a>
+        </div>
+      </div>
+      <div class="contact-item reveal reveal-delay-2">
+        <div class="contact-item-icon">🗺️</div>
+        <div class="contact-item-text">
+          <span>Coverage</span>
+          <p>All Over Tamil Nadu</p>
+        </div>
+      </div>
+      <div class="contact-item reveal reveal-delay-3">
+        <div class="contact-item-icon">📲</div>
+        <div class="contact-item-text">
+          <span>WhatsApp Orders</span>
+          <a href="https://wa.me/919025549430" target="_blank" rel="noopener">Chat on WhatsApp →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form reveal reveal-delay-2">
+      <div class="section-header" style="text-align:left; margin-bottom:2rem;">
+        <span class="section-eyebrow">Send an Enquiry</span>
+        <h3 style="font-family:'Cinzel',serif; font-size:1.6rem; color:var(--white); font-weight:700;">Place an Order or Ask Us Anything</h3>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <input type="text" placeholder="Your Name">
+        </div>
+        <div class="form-group">
+          <input type="tel" placeholder="Phone Number">
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="email" placeholder="Email Address">
+      </div>
+      <div class="form-group">
+        <select style="background:rgba(253,246,227,.06); border:1.5px solid rgba(201,150,42,.2); border-radius:.6rem; color:rgba(253,246,227,.6); font-family:'Cormorant Garamond',serif; font-size:1rem; padding:.85rem 1.2rem; width:100%; outline:none;">
+          <option value="" disabled selected>Select Product Category</option>
+          <option value="cooking">🌶 Cooking Masalas</option>
+          <option value="skincare">✨ Skin Care</option>
+          <option value="haircare">💆 Hair Care</option>
+          <option value="other">Other / Multiple</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <textarea placeholder="Your message or order details..."></textarea>
+      </div>
+      <button class="form-submit" onclick="handleEnquiry()">Send Enquiry →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ═══════════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <img src="https://jothi-masala.vercel.app/images/logo.png" alt="Jothi Masala" onerror="this.style.display='none'">
+        <span class="footer-logo-name">Jothi Masala</span>
+      </div>
+      <p>Authentic homemade masala, skin care, and hair care products. Founded by Nagajothi M. Trusted across Tamil Nadu since the beginning.</p>
+      <div class="footer-social">
+        <a href="https://wa.me/919025549430" class="social-btn" target="_blank" rel="noopener" title="WhatsApp">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.115.553 4.1 1.523 5.824L0 24l6.335-1.505A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.795 9.795 0 01-5.003-1.376l-.36-.213-3.72.883.9-3.634-.234-.373A9.77 9.77 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+        </a>
+        <a href="mailto:Jothimasala0827@gmail.com" class="social-btn" title="Email">✉</a>
+        <a href="tel:9025549430" class="social-btn" title="Call">📞</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Products</h4>
+      <ul>
+        <li><a href="#products">Turmeric Powder</a></li>
+        <li><a href="#products">Red Chilli Powder</a></li>
+        <li><a href="#products">Sambar Powder</a></li>
+        <li><a href="#products">Idli Podi</a></li>
+        <li><a href="#products">Garam Masala</a></li>
+        <li><a href="#products">Shikakai Powder</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#products">Our Range</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="https://wa.me/919025549430">WhatsApp Order</a></li>
+        <li><a href="mailto:Jothimasala0827@gmail.com">Email Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Jothi Masala. All Rights Reserved. Founder: Nagajothi M</p>
+    <div class="footer-fssai">FSSAI Certified</div>
+  </div>
+</footer>
+
+<!-- ══ WHATSAPP FLOAT ════════════════════════════════════ -->
+<a href="https://wa.me/919025549430" class="wa-float" target="_blank" rel="noopener" title="WhatsApp Order">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.115.553 4.1 1.523 5.824L0 24l6.335-1.505A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.795 9.795 0 01-5.003-1.376l-.36-.213-3.72.883.9-3.634-.234-.373A9.77 9.77 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+</a>
+
+<!-- ══ PRODUCT MODAL ══════════════════════════════════════ -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
+  <div class="modal" id="modal" style="position:relative">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-img">
+      <img id="modalImg" src="" alt="">
+    </div>
+    <div class="modal-body">
+      <div class="modal-cat" id="modalCat"></div>
+      <div class="modal-name" id="modalName"></div>
+      <div class="modal-tamil" id="modalTamil"></div>
+      <div class="modal-desc" id="modalDesc"></div>
+      <div class="modal-sizes" id="modalSizes"></div>
+      <a class="modal-wa-btn" id="modalWA" href="#" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.115.553 4.1 1.523 5.824L0 24l6.335-1.505A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.795 9.795 0 01-5.003-1.376l-.36-.213-3.72.883.9-3.634-.234-.373A9.77 9.77 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+        Order via WhatsApp
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ══ JS ══════════════════════════════════════════════ -->
+<script>
+  // ── Navbar scroll ──
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // ── Mobile menu ──
+  function toggleMenu() {
+    document.getElementById('mobileNav').classList.toggle('open');
+  }
+
+  // ── Scroll reveal ──
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.12 });
+  reveals.forEach(r => observer.observe(r));
+
+  // ── Product filter ──
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      document.querySelectorAll('.product-card').forEach(card => {
+        const show = filter === 'all' || card.dataset.cat === filter;
+        card.style.display = show ? '' : 'none';
+        if (show) {
+          card.style.animation = 'fadeUp .4s ease both';
+          setTimeout(() => card.style.animation = '', 500);
+        }
+      });
+    });
+  });
+
+  // ── Product modal ──
+  function openModal(card) {
+    const name   = card.dataset.name;
+    const tamil  = card.dataset.tamil;
+    const img    = card.dataset.img;
+    const desc   = card.dataset.desc;
+    const cat    = card.dataset.cat;
+    const catMap = { cooking:'🌶 Cooking', skincare:'✨ Skin Care', haircare:'💆 Hair Care' };
+
+    document.getElementById('modalImg').src    = img;
+    document.getElementById('modalImg').alt    = name;
+    document.getElementById('modalCat').textContent  = catMap[cat] || cat;
+    document.getElementById('modalName').textContent = name;
+    document.getElementById('modalTamil').textContent= tamil;
+    document.getElementById('modalDesc').textContent = desc;
+
+    const sizes = document.getElementById('modalSizes');
+    sizes.innerHTML = ['20g','50g','100g','More sizes'].map(s =>
+      `<span class="modal-size-tag">${s}</span>`).join('');
+
+    const msg = encodeURIComponent(`Hi! I'm interested in ordering *${name}* (${tamil}) from Jothi Masala. Please share more details.`);
+    document.getElementById('modalWA').href = `https://wa.me/919025549430?text=${msg}`;
+
+    document.getElementById('modalOverlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    document.getElementById('modalOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function closeModalOutside(e) {
+    if (e.target === document.getElementById('modalOverlay')) closeModal();
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  // ── Enquiry form ──
+  function handleEnquiry() {
+    const inputs = document.querySelectorAll('.contact-form input, .contact-form textarea, .contact-form select');
+    let name = '', phone = '', msg = '';
+    inputs.forEach(i => {
+      if (i.placeholder === 'Your Name') name = i.value;
+      if (i.placeholder === 'Phone Number') phone = i.value;
+      if (i.tagName === 'TEXTAREA') msg = i.value;
+    });
+    if (!name || !phone) { alert('Please fill in your name and phone number.'); return; }
+    const text = encodeURIComponent(`Hello Jothi Masala!\n\nName: ${name}\nPhone: ${phone}\nMessage: ${msg || 'General enquiry'}`);
+    window.open(`https://wa.me/919025549430?text=${text}`, '_blank');
+  }
+
+  // ── Stagger product cards ──
+  document.querySelectorAll('.product-card').forEach((card, i) => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(24px)';
+    const cardObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          setTimeout(() => {
+            e.target.style.transition = 'opacity .5s ease, transform .5s ease';
+            e.target.style.opacity = '1';
+            e.target.style.transform = 'translateY(0)';
+          }, (i % 4) * 80);
+          cardObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    cardObs.observe(card);
+  });
+</script>
+</body>
+</html>
